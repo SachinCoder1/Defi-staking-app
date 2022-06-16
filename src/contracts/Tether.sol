@@ -24,7 +24,7 @@ contract Tether {
     mapping(address =>  mapping(address => uint256)) public allowances;
     
     
-    constructor(){
+    constructor() public {
         balanceOf[msg.sender] = totalSupply;
     }
 
@@ -53,7 +53,9 @@ contract Tether {
 
     // Approve the transaction
     function approve(address _spender, uint256 _value) public returns(bool success) {
-        allowances[msg.sender][_spender] = _value
+        allowances[msg.sender][_spender] = _value;
+        emit Approval(msg.sender, _spender, _value);
+        return true;
     }
 
 
