@@ -18,7 +18,7 @@ contract Rewards {
     mapping(address => uint256) public balances;
     mapping(address => mapping(address => uint256)) public allowances;
 
-    constructor() public {
+    constructor() {
         balances[msg.sender] = totalSupply;
     }
 
