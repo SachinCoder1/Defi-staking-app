@@ -10,10 +10,10 @@ module.exports = async function(deployer, network, accounts) {
     const rewards = await Rewards.deployed();
     
     
-    await deployer.deploy(DeBank);
+    await deployer.deploy(DeBank, rewards.address, tether.address);
     const debank = await DeBank.deployed();
 
-    await rewards.transfer(DeBank.address, '1000000000000000000000000');
+    await rewards.transfer(debank.address, '1000000000000000000000000');
 
     await tether.transfer(accounts[1], '1000000000000000000')
 
