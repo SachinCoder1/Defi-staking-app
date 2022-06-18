@@ -1,9 +1,8 @@
 // SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.6;
-import './Rewards.sol';
-import './Tether.sol';
-
+import "./Rewards.sol";
+import "./Tether.sol";
 
 contract DeBank {
     string public name = "DeBank";
@@ -11,8 +10,8 @@ contract DeBank {
     Rewards public rewards;
     Tether public tether;
 
-    constructor(Rewards _rewards, Tether _tether){
-       rewards = _rewards;
-       tether = _tether;
+    constructor(Rewards _rewards, Tether _tether) {
+        rewards = _rewards;
+        tether = _tether;
     }
 }
