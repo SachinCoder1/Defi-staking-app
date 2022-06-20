@@ -16,7 +16,7 @@ module.exports = {
   compilers: {
     // solidity compiler
     solc: {
-      version: "^0.8.6",
+      version: "^0.5.0",
       optimizer: {
         enabled: true,
         runs: 200,
